@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Mohaned Hassan — Senior GIS & Geospatial Specialist</title>
 <meta name="description" content="Portfolio of Mohaned Hassan, Senior GIS & Geospatial Specialist in Riyadh — enterprise GIS, geospatial data management, remote sensing, and survey engineering.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
 html{scroll-behavior:smooth;font-size:clamp(16px,0.45vw + 14.6px,20px)}
 body{
   font-family:var(--font);background:var(--bg);color:var(--text);
-  line-height:1.75;font-size:1.05rem;overflow-x:hidden;
+  line-height:1.75;font-size:1.05rem;overflow-x:hidden;-webkit-tap-highlight-color:transparent;
 }
 @media(max-width:640px){body{font-size:16.5px}}
 img{max-width:100%}
@@ -83,7 +83,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--blue);transition:width .3s}
 .nav-links a:hover,.nav-links a.active{color:var(--text)}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
-.menu-btn{display:none;background:none;border:none;color:var(--text);font-size:24px;cursor:pointer}
+.menu-btn{display:none;background:none;border:none;color:var(--text);font-size:26px;cursor:pointer;padding:6px 10px;margin:-6px -10px}
 @media(max-width:840px){
   .menu-btn{display:block}
   .nav-links{position:fixed;inset:64px 0 auto auto;flex-direction:column;gap:0;background:rgba(9,18,35,.97);
@@ -127,7 +127,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   color:var(--muted);border:1px solid var(--line-strong);padding:8px 16px;border-radius:999px;margin-bottom:28px;
   background:rgba(10,22,42,.55);backdrop-filter:blur(8px)}
 .hero-badge .live{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 2s infinite}
-.hero h1{font-size:clamp(2.6rem,5.6vw,5.2rem);font-weight:800;line-height:1;letter-spacing:-.03em;margin-bottom:18px;white-space:nowrap}
+.hero h1{font-size:clamp(2.2rem,7vw,5.2rem);font-weight:800;line-height:1.02;letter-spacing:-.03em;margin-bottom:16px;white-space:nowrap}
 .role{font-size:clamp(1.35rem,3vw,2rem);font-weight:600;color:#8ab6ff;margin-bottom:24px;min-height:1.6em;font-family:var(--mono)}
 .caret{display:inline-block;width:2px;height:1.1em;background:var(--blue);margin-left:4px;vertical-align:text-bottom;animation:blink 1s step-end infinite}
 @keyframes blink{50%{opacity:0}}
@@ -266,7 +266,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .socials a:hover{transform:translateY(-4px);border-color:var(--teal);color:var(--teal)}
 .form{background:var(--panel);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
 .form label{display:block;font-size:.92rem;font-weight:500;margin-bottom:7px;color:var(--muted)}
-.form input,.form textarea{width:100%;padding:15px 18px;border-radius:12px;margin-bottom:20px;background:rgba(255,255,255,.06);
+.form input,.form textarea{width:100%;padding:15px 18px;border-radius:12px;margin-bottom:20px;background:rgba(255,255,255,.06);font-size:16px;
   border:1px solid var(--line);color:var(--text);font-family:inherit;font-size:1.02rem;transition:border-color .25s}
 .form input:focus,.form textarea:focus{border-color:var(--teal)}
 .form textarea{min-height:130px;resize:vertical}
@@ -276,15 +276,143 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 /* ===== footer ===== */
 footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--muted);font-family:var(--mono);font-size:.92rem}
 
+/* ===== TABLET (max 900px) ===== */
+@media(max-width:900px){
+  .wrap{padding:0 20px}
+  section{padding:56px 0}
+  .hero{padding:100px 0 50px;min-height:auto}
+  .sec-head{margin-bottom:28px}
+  .marquee-track{animation-duration:20s}
+  .logo-grid{grid-template-columns:repeat(3,1fr);gap:14px}
+  .logo-item{min-height:110px;padding:14px}
+  .logo-item img{max-height:52px}
+}
+
+/* ===== PHONE (max 640px) ===== */
 @media(max-width:640px){
-  .pill{padding:12px 22px;font-size:1rem}
-  .btn{padding:15px 28px;font-size:1rem;width:100%;justify-content:center}
-  .hero-btns{flex-direction:column;align-items:stretch}
-  .hero-metrics{gap:24px}
+  .wrap{padding:0 18px}
+  section{padding:52px 0}
+
+  /* nav */
+  .nav-inner{padding:14px 18px}
+  .nav.scrolled .nav-inner{padding:10px 18px}
+  .brand{font-size:1.05rem}
+  .brand .dot{width:9px;height:9px}
+  .nav-links{width:260px;max-width:calc(100vw - 24px)}
+
+  /* hero */
+  .hero{padding:96px 0 56px;text-align:center}
+  .hero h1{font-size:clamp(2rem,10vw,2.8rem);white-space:normal;line-height:1.05}
+  .role{font-size:1.05rem}
+  .hero .lead{font-size:1rem;margin-bottom:28px}
+  .hero-badge{font-size:.72rem;padding:6px 12px;letter-spacing:.05em}
+  .hero-btns{flex-direction:column;align-items:stretch;gap:12px;margin-bottom:32px}
+  .btn{padding:14px 24px;font-size:.98rem;width:100%;justify-content:center}
+  .hero-metrics{gap:22px;justify-content:space-around;width:100%}
+  .hero-metrics .m .n{font-size:1.7rem}
+  .hero-metrics .m .l{font-size:.72rem}
+  .hero-visual{min-height:280px;margin-bottom:20px}
+  .ring.r1{width:240px;height:240px}
+  .ring.r2{width:190px;height:190px}
+  .ring.r3{width:290px;height:290px}
+  .avatar{width:150px;height:150px}
+  .scroll-cue{display:none}
+
+  /* headings */
+  .sec-head h2{font-size:clamp(1.6rem,7vw,2.2rem)}
+  .sec-head p{font-size:.98rem}
+  .sec-head-lite h2{font-size:1.5rem}
+  .eyebrow{font-size:.72rem;letter-spacing:.18em}
+
+  /* marquee */
+  .marquee{padding:10px 0}
+  .marquee-track{gap:36px;animation-duration:16s}
+  .marquee-track span{font-size:1rem;gap:36px}
+
+  /* about */
+  .about-grid{gap:32px}
+  .about-photo .frame{width:220px;height:280px}
+  .about-photo .tagchip{font-size:.75rem;padding:10px 14px;right:0;bottom:-14px}
+  .about-text h3{font-size:1.4rem}
+  .about-text p{font-size:.98rem}
   .about-stats{grid-template-columns:1fr}
-  .cert-cats{grid-template-columns:1fr}
-  .proj-grid{grid-template-columns:1fr}
-  .cert-cat li a{flex-direction:column;gap:4px}
+  .about-stats .s{padding:14px 16px}
+  .about-stats .s .n{font-size:1.6rem}
+
+  /* skills / credentials */
+  .sc-grid{gap:36px}
+  .skill-pills{gap:10px;max-width:100%}
+  .pill{padding:10px 18px;font-size:.9rem}
+  .cert-cats-compact{gap:12px}
+  .cert-cats-compact .cert-cat{padding:16px 18px}
+  .cert-cat h3{font-size:.7rem;letter-spacing:.14em}
+  .cert-cats-compact .cert-cat li{padding:10px 0;font-size:.9rem}
+  .cert-cat li a{flex-direction:column;align-items:flex-start;gap:4px}
+  .cert-cat li .yr,.cert-cat li .prog{margin-left:0}
+
+  /* projects */
+  .proj-grid{grid-template-columns:1fr;gap:20px}
+  .proj-top{height:130px}
+  .proj-top svg{width:44px;height:44px}
+  .proj-body{padding:20px}
+  .proj-body h3{font-size:1.15rem}
+  .proj-body p{font-size:.95rem}
+  .proj-meta{font-size:.74rem}
+  .tags span{font-size:.74rem;padding:3px 9px}
+
+  /* companies */
+  .logo-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .logo-item{min-height:100px;padding:14px}
+  .logo-item img{max-height:44px}
+  .logo-item .lrole{font-size:.66rem}
+
+  /* contact */
+  .contact-grid{gap:36px}
+  .contact-info h3{font-size:1.4rem}
+  .contact-info>p{font-size:.98rem}
+  .c-item{gap:12px;margin-bottom:16px}
+  .c-item .ic{width:40px;height:40px;font-size:16px}
+  .form{padding:22px}
+  .form input,.form textarea{padding:13px 15px;font-size:.98rem}
+  .socials a{width:42px;height:42px}
+
+  footer{padding:32px 18px;font-size:.78rem}
+
+  /* disable heavy hover effects on touch */
+  .tilt,.proj{transition-duration:.2s}
+
+  /* background photo lighter on mobile for readability */
+  .bg-tint{background:radial-gradient(120% 90% at 50% 0%,rgba(8,18,36,.45) 0%,rgba(8,17,34,.72) 60%,rgba(6,13,26,.85) 100%)}
+}
+
+/* ===== SMALL PHONE (max 380px) ===== */
+@media(max-width:380px){
+  .hero h1{font-size:1.85rem}
+  .role{font-size:.98rem}
+  .hero-metrics{gap:14px}
+  .hero-metrics .m .n{font-size:1.5rem}
+  .avatar{width:130px;height:130px}
+  .ring.r1{width:210px;height:210px}
+  .ring.r2{width:170px;height:170px}
+  .ring.r3{width:250px;height:250px}
+  .logo-grid{grid-template-columns:1fr 1fr}
+  .about-photo .frame{width:200px;height:250px}
+}
+
+/* ===== LANDSCAPE PHONE (short screens) ===== */
+@media(max-height:520px) and (orientation:landscape){
+  .hero{min-height:auto;padding:96px 0 40px}
+  .hero-visual{min-height:220px}
+  .ring.r3{width:250px;height:250px}
+  .ring.r1{width:200px;height:200px}
+  .ring.r2{width:160px;height:160px}
+  .avatar{width:130px;height:130px}
+}
+
+/* Reduce animation on any low-power / small viewport */
+@media(max-width:640px){
+  .bg-photo{animation-duration:60s}
+  .light-sweep::before{animation-duration:18s;opacity:.7}
 }
 
 /* ===== combined skills + credentials layout ===== */
