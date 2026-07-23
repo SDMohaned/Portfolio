@@ -78,8 +78,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .brand{font-weight:700;font-size:1.05rem;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
 .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--green);box-shadow:0 0 14px rgba(18,183,106,.7);animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.7);opacity:.6}}
-.nav-links{display:flex;gap:clamp(20px,3vw,42px);list-style:none;align-items:center}
-.nav-links a{font-size:.92rem;font-weight:500;color:var(--muted);position:relative;transition:color .25s;letter-spacing:.01em}
+.nav-links{display:flex;gap:clamp(20px,3vw,42px);list-style:none;align-items:center;justify-content:space-between;flex:1;width:100%}
+.nav-links a{font-size:1.2rem;font-weight:600;color:var(--muted);position:relative;transition:color .25s;letter-spacing:.02em}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--blue);transition:width .3s}
 .nav-links a:hover,.nav-links a.active{color:var(--text)}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
@@ -542,7 +542,6 @@ footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:v
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#home" class="brand"><span class="dot"></span>Mohaned Hassan</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#home">About</a></li>
